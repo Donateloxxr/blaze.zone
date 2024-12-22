@@ -111,9 +111,22 @@
             margin-right: 50px;
         }
 
+        .mobile-warning {
+            text-align: center;
+            color: #FF0000;
+            font-size: 24px;
+            margin-top: 200px;
+        }
+
     </style>
 </head>
 <body>
+
+    <script>
+        if (window.innerWidth <= 800) {
+            document.body.innerHTML = '<div class="mobile-warning">Этот сайт не поддерживает мобильные устройства. Пожалуйста, используйте ПК для доступа.</div>';
+        }
+    </script>
 
     <a href="menu.html" class="menu-button">Меню</a>
 
