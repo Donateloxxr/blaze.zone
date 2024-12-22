@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umbrella Dota 2 Client</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            background-image: url('https://uc.zone/background.png');
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo {
+            height: 40px;
+            cursor: pointer;
+            position: absolute;
+            left: 10%;
+            top: 15px;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-button {
+            position: absolute;
+            left: 21%;
+            top: 15px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: transparent;
+            color: #FF0000;
+            border: 2px solid #FF0000;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .menu-button:hover {
+            background-color: #FF0000;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            width: 80%;
+            flex-direction: row;
+        }
+
+        .description {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: left;
+            max-width: 400px;
+            margin-right: 50px;
+        }
+
+        h1 {
+            color: #FF0000;
+            font-size: 48px;
+            margin-bottom: 10px;
+            margin-left: 0px;
+            white-space: nowrap;
+            margin-top: 100px;
+        }
+
+        .button {
+            background-color: transparent;
+            color: #FF0000;
+            font-size: 16px;
+            padding: 8px 16px;
+            border: 2px solid #FF0000;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 0;
+            line-height: 1.2;
+            text-align: center;
+            box-sizing: border-box;
+            width: fit-content;
+        }
+
+        .button:hover {
+            background-color: #FF0000;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .umbrella-image {
+            height: 400px;
+            margin-top: 50px;
+        }
+
+        .description-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-right: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="menu.html" class="menu-button">Меню</a>
+
+    <a href="index.html">
+        <img src="https://uc.zone/_ipx/s_224x60/logo.svg" alt="Umbrella Logo" class="logo">
+    </a>
+
+    <div class="container">
+        <div class="description-wrapper">
+            <div class="description">
+                <h1>Umbrella Dota 2</h1>
+                <p>
+                    Начиная свой путь в далеком 2015 году, мы по сей день занимаемся разработкой скриптов для Dota 2. Каждый день мы усовершенствуем наш продукт как в его функциональной, так и визуальной частях, а также в области поддержки пользователей.
+                </p>
+                <p>
+                    Всё это мы делаем с одной целью — сделать Ваш геймплей максимально расслабленным и позволить Вам получать удовольствие от игры. В этом Вы можете убедиться сами, совершенно бесплатно: просто нажмите кнопку ниже и взгляните на привычную игру иначе.
+                </p>
+                <p>
+                    ПО РЕГ КОДУ BLAZE69 ВЫ ПОЛУЧАЕТЕ 33% СКИДКИ НА ПЕРВУЮ ПОКУПК.
+                </p>
+            </div>
+            <a href="https://uc.zone/?referrer=BLAZE69" class="button">Попробовать бесплатно</a>
+        </div>
+
+        <img src="https://uc.zone/_ipx/_/dota2/logo.svg" alt="Dota 2 Logo" class="umbrella-image">
+    </div>
+
+</body>
+</html>
