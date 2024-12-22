@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логотипы и ссылки</title>
+    <style>
+        body {
+            background-image: url('https://uc.zone/background.png');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .links-container {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .link {
+            font-size: 20px;
+            color: red;
+            margin-bottom: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .link:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .link:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .link:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .link:hover {
+            color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        .button {
+            background-color: #000;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 75px;
+            height: 75px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            animation: bounce 1s infinite alternate;
+        }
+
+        .button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="links-container">
+        <a href="https://www.tiktok.com/@blaze.nn" class="link" target="_blank">Наш ТикТок</a>
+        <a href="https://t.me/live_soft" class="link" target="_blank">Наш Телеграм</a>
+        <a href="https://uc.zone/?referrer=BLAZE69" class="link" target="_blank">Наш сайт</a>
+    </div>
+
+    <a href="https://www.tiktok.com/@blaze.nn" target="_blank">
+        <div class="button">
+            <img src="https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338429_960_720.png" alt="TikTok Logo">
+        </div>
+    </a>
+
+    <a href="https://t.me/live_soft" target="_blank">
+        <div class="button">
+            <img src="https://i.pinimg.com/736x/29/52/b7/2952b7f67446895f8f11c3afacc89edc.jpg" alt="Telegram Logo">
+        </div>
+    </a>
+
+    <a href="https://uc.zone/?referrer=BLAZE69" target="_blank">
+        <div class="button">
+            <img src="https://i.pinimg.com/originals/7e/c2/cd/7ec2cd2c1a54274b1016ad8e87dd6371.gif" alt="Umbrella Corporation Logo">
+        </div>
+    </a>
+
+</body>
+</html>

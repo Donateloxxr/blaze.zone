@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню и Возможности</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #808080;
+            color: #fff;
+        }
+
+        .container {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .menu-button, .about-button {
+            padding: 10px 20px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid red;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 20px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .menu-button.menu-active {
+            background-color: red;
+            color: white;
+        }
+
+        .about-button {
+            position: relative;
+            overflow: hidden;
+            color: white;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .about-button::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            transition: top 0.3s ease;
+            z-index: 0;
+        }
+
+        .about-button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-button:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .about-button:hover::before {
+            top: 0;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu-image {
+            width: 40%;
+            padding-right: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            margin: 0;
+            display: block;
+        }
+
+        .menu-image:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-text {
+            width: 55%;
+            padding-left: 20px;
+        }
+
+        .menu-text h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .menu-text hr {
+            width: 120px;
+            height: 3px;
+            background: #ff1e1e;
+            border: none;
+            margin: 10px 0;
+        }
+
+        .menu-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #ccc;
+            margin: 0;
+            text-align: left;
+        }
+
+        .features {
+            text-align: center;
+            margin: 0;
+        }
+
+        .features h2 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .features hr {
+            width: 120px;
+            height: 3px;
+            background: #ff1e1e;
+            border: none;
+            margin: 0 auto 10px auto;
+        }
+
+        .video-button-container {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding: 15px 30px;
+            border-radius: 5px;
+            background-color: transparent;
+            color: #ff1e1e;
+            border: 2px solid #ff1e1e;
+            font-size: 18px;
+            text-align: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .video-button-container::before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ff1e1e;
+            transition: top 0.3s ease;
+            z-index: 0;
+        }
+
+        .video-button-container:hover::before {
+            top: 0;
+        }
+
+        .video-button-container span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .video-button-container:hover {
+            color: white;
+        }
+
+        .video-button-container:hover span {
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:visited {
+            color: inherit;
+        }
+
+        a:focus, a:hover {
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu-image {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            .menu-text {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .logo-container {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="https://uc.zone/_ipx/s_224x60/logo.svg" alt="Logo" class="logo">
+        </a>
+        <button class="menu-button menu-active">Меню</button>
+        <a href="about.html"><button class="about-button"><span>О нас</span></button></a>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="menu-image">
+                <img src="https://uc.zone/_ipx/_/dota2/menu.png" alt="Menu UI">
+            </div>
+            <div class="menu-text">
+                <h1>МЕНЮ</h1>
+                <p>Возможности программы поистине огромны, поэтому важнейшей частью для нас было грамотно распределить весь функционал для Вашего удобства.</p>
+                <hr>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Видео обзор</h2>
+            <hr>
+            <a href="https://www.youtube.com/watch?v=GbpmA7P1c8Q&t=2537s&ab_channel=Db4k" target="_blank">
+                <div class="video-button-container">
+                    <span>Перейти к видео</span>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
